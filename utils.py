@@ -110,6 +110,6 @@ def get_info(density_matrix1, density_matrix2):
     input = (circuit1, circuit2, [0, 1], [0, 1])
     info["fidelity"] = qml.qinfo.fidelity(*input)()
     info["trace_distance"] = qml.qinfo.trace_distance(*input)()
-    info["relative_entropy"] = qml.qinfo.relative_entropy(*input)()
+    #info["relative_entropy"] = qml.qinfo.relative_entropy(*input)()
     
     return info

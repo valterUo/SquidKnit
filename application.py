@@ -126,8 +126,8 @@ class GateProgram(Program):
         csocket.send("")
 
         pauli_string = yield from csocket.recv()
-        print(f"Pauli string = {pauli_string}")
-        print(f"Correction operator = {self.correction_operator}")
+        self.logger.info(f"Pauli string = {pauli_string}")
+        self.logger.info(f"Correction operator = {self.correction_operator}")
         
         epr1_meas, epr2_meas, input2_meas, input1_meas = eval(pauli_string)
         
