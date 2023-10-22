@@ -1,4 +1,4 @@
-# SquidKnit: Circuit knitting with quantum and classical communication using SquidQASM
+# SquidKnit: Circuit knitting with quantum and classical communication using SquidASM
 
 #### Valter Uotila, PhD student, University of Helsinki
 
@@ -28,7 +28,7 @@ The same circuit has also a simple cut into three parts:
 
 <img src="resources/circuit_knitting_figure_6.png" height="300">
 
-Now we see that interaction between the parts can be realized with two EPR pairs and classical communication. On the other hand, it become quite fast clear that SquidASM is not yet able to simulate networks which have three nodes and two links. You can find a initial draft in the folder application_three_nodes.
+Now we see that interaction between the parts can be realized with two EPR pairs and classical communication. On the other hand, it become quite fast clear that SquidASM is not yet able to simulate networks which have three nodes and two links. You can find a initial draft in the folder `application_three_nodes`.
 
 Thus, the second way to organize the circuit is the following:
 
@@ -38,7 +38,19 @@ In practice this method is just two state teleportations which teleport the stat
 
 ### Correction operator
 
+After one is familiar with teleportation, it is easy to see that the previous method just applies it twice. Single state quantum teleportation applies a correction operator and similarly we need to apply correction operator after this teleportation. Then the question is, what is the correction operator and how to construct it for any Clifford gate?
+
+The answer is provided in papers [Quantum Teleportation is a Universal Computational Primitive
+](https://arxiv.org/abs/quant-ph/9908010v1) and [A Theory of Fault-Tolerant Quantum Computation](https://arxiv.org/abs/quant-ph/9702029v2). The idea is to check how the Clifford gate acts on the Pauli group. We then construct the Pauli decomposition for each $U(I \otimes X)U^{\dag}$, $U(I \otimes Z)U^{\dag}$, $U(Z \otimes I)U^{\dag}$ and $U(X \otimes I)U^{\dag}$. I implemented this with Pennylane and the codes is in `utils.py`.
+
 ## Discussion
+
+To demonstrate that the framework produces reasonable results I have tested the model with SquidASM using the noise models for links and qdevices. The results are the following:
+
+<img src="resources/link_fidelity_results.png" height="300">
+<img src="resources/qdevice_noise_results.png" height="300">
+
+As far as I understand, the results are expected.
 
 ### Related work
 
