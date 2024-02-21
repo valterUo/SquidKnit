@@ -1,11 +1,10 @@
 from squidasm.run.stack.config import (
-    DepolariseLinkConfig,
     GenericQDeviceConfig,
     NVQDeviceConfig,
-    LinkConfig,
-    StackConfig,
-    StackNetworkConfig,
+    StackConfig
 )
+from netsquid_magic.models.depolarise import DepolariseLinkConfig
+from netsquid_netbuilder.base_configs import LinkConfig, StackNetworkConfig
 
 def create_two_node_network(
     node_names, device = "generic", fidelity: float = 0, qdevice_noise: float = 0
