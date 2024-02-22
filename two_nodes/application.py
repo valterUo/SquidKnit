@@ -6,7 +6,6 @@ from squidasm.sim.stack.common import LogManager
 from squidasm.sim.stack.program import Program, ProgramContext, ProgramMeta
 from squidasm.util import get_qubit_state
 
-
 class InputProgram(Program):
     PEER_NAME = "Gate"
 

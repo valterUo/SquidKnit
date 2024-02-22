@@ -1,20 +1,21 @@
 import logging
 from two_nodes.application import GateProgram, InputProgram
-from two_nodes.config import create_two_node_network
 from netsquid_netbuilder.util.network_generation import create_simple_network
 
 from squidasm.run.stack.run import run
 from utils.utils import calculate_reference_state, get_info
 
-def run_simulation(input, gate, num_times = 1, device = "generic", link_fidelity: float = 1.0, qdevice_noise: float = 0.0, logging = False):
+def run_simulation(input, gate, num_times = 1, device = "generic", link_fidelity: float = 1.0, qdevice_noise: float = 0.0, log = False):
 
     node_names = ["Gate", "Input"]
-    cfg = create_simple_network(node_names=node_names, link_noise=link_fidelity, qdevice_noise=qdevice_noise) #create_two_node_network(node_names, device, link_fidelity, qdevice_noise)
+    cfg = create_simple_network(node_names=node_names, 
+                                link_noise= 1 - link_fidelity*4 / 3, 
+                                qdevice_noise=qdevice_noise)
 
     gate_program = GateProgram(gate)
     input_program = InputProgram(input)
 
-    if logging:
+    if log:
         gate_program.logger.setLevel(logging.INFO)
         input_program.logger.setLevel(logging.INFO)
     

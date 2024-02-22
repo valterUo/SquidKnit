@@ -31,7 +31,6 @@ class LeftProgram(Program):
 
         self.logger.info("Creating EPR pairs...")
         epr = epr_socket.create_keep()[0]
-        #epr2 = epr_socket.create_keep()[0]
 
         yield from connection.flush()
         
@@ -47,19 +46,16 @@ class LeftProgram(Program):
         self.logger.info("Prepare Bell measurement...")
         
         input.cnot(epr)
-        #epr2.cnot(input2)
         input.H()
-        #epr2.H()
         
         self.logger.info("Measure...")
         
         epr_meas = epr.measure()
-        #epr2_meas = epr2.measure()
-        input_meas = input.measure()
+        input1_meas = input.measure()
         
         yield from connection.flush()
 
-        result = str((int(epr_meas), int(input_meas)))
+        result = str((int(epr_meas), int(input1_meas)))
         csocket.send(result)
 
         yield from connection.flush()
@@ -89,7 +85,6 @@ class RightProgram(Program):
         connection = context.connection
 
         self.logger.info("Creating EPR pairs...")
-        #epr = epr_socket.create_keep()[0]
         epr2 = epr_socket.create_keep()[0]
 
         yield from connection.flush()
@@ -113,11 +108,11 @@ class RightProgram(Program):
         
         #epr_meas = epr.measure()
         epr2_meas = epr2.measure()
-        input_meas = input.measure()
+        input2_meas = input.measure()
         
         yield from connection.flush()
 
-        result = str((int(epr2_meas), int(input_meas)))
+        result = str((int(epr2_meas), int(input2_meas)))
         csocket.send(result)
 
         yield from connection.flush()

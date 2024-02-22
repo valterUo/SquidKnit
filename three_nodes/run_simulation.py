@@ -2,7 +2,6 @@ import logging
 
 from networkx import DiGraph
 from three_nodes.application import LeftProgram, RightProgram, GateProgram
-from three_nodes.network_generation import create_network_from_graph
 from two_nodes.config import create_two_node_network
 from netsquid_netbuilder.util.network_generation import create_simple_network
 
@@ -17,7 +16,7 @@ def run_simulation(left, right, gate, num_times = 1, device = "generic", link_fi
     graph.add_nodes_from(node_names)
     graph.add_edges_from([("Gate", "Left"), ("Gate", "Right")])
     
-    cfg = create_simple_network(["Left", "Right", "Gate"]) #create_network_from_graph(graph) #create_two_node_network(node_names, device, link_fidelity, qdevice_noise)
+    cfg = create_simple_network(["Left", "Right", "Gate"], link_noise = 1 - link_fidelity*4 / 3, qdevice_noise = qdevice_noise) #create_network_from_graph(graph) #create_two_node_network(node_names, device, link_fidelity, qdevice_noise)
 
     gate_program = GateProgram(gate)
     left_program = LeftProgram(left)
@@ -27,15 +26,25 @@ def run_simulation(left, right, gate, num_times = 1, device = "generic", link_fi
         gate_program.logger.setLevel(logging.INFO)
         left_program.logger.setLevel(logging.INFO)
         right_program.logger.setLevel(logging.INFO)
+        
+    results = {"fidelity": 0,
+               "trace_distance": 0 }
 
-    gate_result = run(
-        config = cfg,
-        programs = {"Left": left_program, "Right": right_program, "Gate": gate_program})
-    print(gate_result)
+    for _ in range(num_times):
+        gate_result = run(
+            config = cfg,
+            programs = {"Left": left_program, "Right": right_program, "Gate": gate_program})
+        #print(gate_result)
+
+        input_gates = {"first_qubit": left, "second_qubit": right}
+        reference_state = calculate_reference_state(input_gates, gate)
+        qinfo = get_info(gate_result[-1], reference_state)
+        results["fidelity"] += qinfo["fidelity"]
+        results["trace_distance"] += qinfo["trace_distance"]
+        #results["relative_entropy"] += qinfo["relative_entropy"]
     
-    input_gates = {"first_qubit": left, "second_qubit": right}
-    reference_state = calculate_reference_state(input_gates, gate)
-    print(reference_state)
-    qinfo = get_info(gate_result[-1], reference_state)
-    print(qinfo)
-    return qinfo
+    results["fidelity"] /= num_times
+    results["trace_distance"] /= num_times
+    #results["relative_entropy"] /= num_times
+    
+    return results

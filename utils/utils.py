@@ -1,5 +1,14 @@
+import json
 import pennylane as qml
 import numpy as np
+
+class NumpyArrayEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        if isinstance(obj, complex):
+            return (obj.real, obj.imag)
+        return json.JSONEncoder.default(self, obj)
 
 def get_correction_operator(gate_name):
     
