@@ -79,8 +79,8 @@ def apply_pennylane_gate(input, gate):
         case "T":
             qml.T(wires = input)
     
-    
-@qml.qnode(qml.device("default.qubit", wires = 2))       
+dev = qml.device("default.qubit", wires = 2)
+@qml.qnode(dev)       
 def calculate_reference_state(input, gate):
         
     for input_gate in input["first_qubit"]:
@@ -101,17 +101,32 @@ def calculate_reference_state(input, gate):
             qml.SWAP(wires = [1, 0])
     return qml.density_matrix(wires = [1, 0])
 
+dev_toff = qml.device("default.qubit", wires = 3)
+@qml.qnode(dev_toff)
+def calculate_reference_state_toffoli(input):
+    for input_gate in input["first_qubit"]:
+        apply_pennylane_gate([0], input_gate)
+    
+    for input_gate in input["second_qubit"]:
+        apply_pennylane_gate([1], input_gate)
+    
+    for input_gate in input["third_qubit"]:
+        apply_pennylane_gate([2], input_gate)
+    
+    qml.Toffoli(wires = [0, 1, 2])
+    return qml.density_matrix(wires = [0, 1, 2])
 
+
+dev_mixed = qml.device("default.mixed", wires = 2)
 def get_info(density_matrix1, density_matrix2):
     info = {}
     
-    dev = qml.device("default.mixed", wires = 2)
-    @qml.qnode(dev)
+    @qml.qnode(dev_mixed)
     def circuit1():
         qml.QubitDensityMatrix(density_matrix1, wires=[0, 1])
         return qml.density_matrix(wires=[0, 1])
     
-    @qml.qnode(dev)
+    @qml.qnode(dev_mixed)
     def circuit2():
         qml.QubitDensityMatrix(density_matrix2, wires=[0, 1])
         return qml.density_matrix(wires=[0, 1])
@@ -120,5 +135,34 @@ def get_info(density_matrix1, density_matrix2):
     info["fidelity"] = qml.qinfo.fidelity(*input)()
     info["trace_distance"] = qml.qinfo.trace_distance(*input)()
     #info["relative_entropy"] = qml.qinfo.relative_entropy(*input)()
+    
+    # remove circuits from memory
+    del circuit1
+    del circuit2
+    
+    return info
+
+dev_mixed_toffoli = qml.device("default.mixed", wires = 3)
+def get_info_for_toffoli(density_matrix1, density_matrix2):
+    info = {}
+    
+    
+    @qml.qnode(dev_mixed_toffoli)
+    def circuit1():
+        qml.QubitDensityMatrix(density_matrix1, wires=[0, 1, 2])
+        return qml.density_matrix(wires=[0, 1, 2])
+    
+    @qml.qnode(dev_mixed_toffoli)
+    def circuit2():
+        qml.QubitDensityMatrix(density_matrix2, wires=[0, 1, 2])
+        return qml.density_matrix(wires=[0, 1, 2])
+    
+    input = (circuit1, circuit2, [0, 1, 2], [0, 1, 2])
+    info["fidelity"] = qml.qinfo.fidelity(*input)()
+    info["trace_distance"] = qml.qinfo.trace_distance(*input)()
+    #info["relative_entropy"] = qml.qinfo.relative_entropy(*input)()
+    
+    del circuit1
+    del circuit2
     
     return info

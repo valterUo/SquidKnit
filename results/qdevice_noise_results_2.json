@@ -1,0 +1,848 @@
+{
+    "0.0": {
+        "cnot": {
+            "fidelity": 1.0000000248152505,
+            "trace_distance": 2.2204460492503128e-16
+        },
+        "dcnot": {
+            "fidelity": 1.0000000248152505,
+            "trace_distance": 2.2204460492503128e-16
+        },
+        "cz": {
+            "fidelity": 1.0000000248152505,
+            "trace_distance": 2.2204460492503128e-16
+        },
+        "swap": {
+            "fidelity": 1.0000000248152505,
+            "trace_distance": 2.2204460492503128e-16
+        }
+    },
+    "0.0011111111111111111": {
+        "cnot": {
+            "fidelity": 1.0000000248152505,
+            "trace_distance": 2.2204460492503128e-16
+        },
+        "dcnot": {
+            "fidelity": 0.9600000238226406,
+            "trace_distance": 0.0400000000000001
+        },
+        "cz": {
+            "fidelity": 1.0000000248152505,
+            "trace_distance": 2.2204460492503128e-16
+        },
+        "swap": {
+            "fidelity": 0.9800000243189456,
+            "trace_distance": 0.020000000000000177
+        }
+    },
+    "0.0022222222222222222": {
+        "cnot": {
+            "fidelity": 0.9900000245670981,
+            "trace_distance": 0.010000000000000217
+        },
+        "dcnot": {
+            "fidelity": 0.9700000240707931,
+            "trace_distance": 0.03000000000000008
+        },
+        "cz": {
+            "fidelity": 0.9600000238226406,
+            "trace_distance": 0.04000000000000013
+        },
+        "swap": {
+            "fidelity": 0.9800000243189456,
+            "trace_distance": 0.020000000000000205
+        }
+    },
+    "0.003333333333333333": {
+        "cnot": {
+            "fidelity": 0.9900000245670981,
+            "trace_distance": 0.010000000000000217
+        },
+        "dcnot": {
+            "fidelity": 0.9600000238226406,
+            "trace_distance": 0.04000000000000006
+        },
+        "cz": {
+            "fidelity": 1.0000000248152505,
+            "trace_distance": 2.2204460492503128e-16
+        },
+        "swap": {
+            "fidelity": 0.9700000240707931,
+            "trace_distance": 0.030000000000000047
+        }
+    },
+    "0.0044444444444444444": {
+        "cnot": {
+            "fidelity": 0.9600000238226406,
+            "trace_distance": 0.040000000000000036
+        },
+        "dcnot": {
+            "fidelity": 0.9400000233263356,
+            "trace_distance": 0.06000000000000002
+        },
+        "cz": {
+            "fidelity": 0.9700000240707931,
+            "trace_distance": 0.030000000000000138
+        },
+        "swap": {
+            "fidelity": 0.9900000245670981,
+            "trace_distance": 0.010000000000000217
+        }
+    },
+    "0.005555555555555556": {
+        "cnot": {
+            "fidelity": 0.9500000235744881,
+            "trace_distance": 0.050000000000000065
+        },
+        "dcnot": {
+            "fidelity": 0.9700000240707931,
+            "trace_distance": 0.03000000000000016
+        },
+        "cz": {
+            "fidelity": 0.9700000240707931,
+            "trace_distance": 0.03000000000000004
+        },
+        "swap": {
+            "fidelity": 0.9400000233263356,
+            "trace_distance": 0.060000000000000074
+        }
+    },
+    "0.006666666666666666": {
+        "cnot": {
+            "fidelity": 0.9500000235744881,
+            "trace_distance": 0.050000000000000086
+        },
+        "dcnot": {
+            "fidelity": 0.9700000240707931,
+            "trace_distance": 0.030000000000000086
+        },
+        "cz": {
+            "fidelity": 0.9500000235744881,
+            "trace_distance": 0.050000000000000024
+        },
+        "swap": {
+            "fidelity": 0.9600000238226406,
+            "trace_distance": 0.040000000000000015
+        }
+    },
+    "0.0077777777777777776": {
+        "cnot": {
+            "fidelity": 0.9700000240707931,
+            "trace_distance": 0.03000000000000009
+        },
+        "dcnot": {
+            "fidelity": 0.9700000240707931,
+            "trace_distance": 0.030000000000000044
+        },
+        "cz": {
+            "fidelity": 0.9100000225818781,
+            "trace_distance": 0.09000000000000002
+        },
+        "swap": {
+            "fidelity": 0.9600000238226406,
+            "trace_distance": 0.04000000000000007
+        }
+    },
+    "0.008888888888888889": {
+        "cnot": {
+            "fidelity": 0.9500000235744881,
+            "trace_distance": 0.05000000000000004
+        },
+        "dcnot": {
+            "fidelity": 0.9000000223337256,
+            "trace_distance": 0.10000000000000002
+        },
+        "cz": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000003
+        },
+        "swap": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08
+        }
+    },
+    "0.01": {
+        "cnot": {
+            "fidelity": 0.9300000230781831,
+            "trace_distance": 0.07
+        },
+        "dcnot": {
+            "fidelity": 0.9400000233263356,
+            "trace_distance": 0.060000000000000026
+        },
+        "cz": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000002
+        },
+        "swap": {
+            "fidelity": 0.9600000238226406,
+            "trace_distance": 0.040000000000000036
+        }
+    },
+    "0.011111111111111112": {
+        "cnot": {
+            "fidelity": 0.9700000240707931,
+            "trace_distance": 0.03000000000000018
+        },
+        "dcnot": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000006
+        },
+        "cz": {
+            "fidelity": 0.9500000235744881,
+            "trace_distance": 0.050000000000000086
+        },
+        "swap": {
+            "fidelity": 0.9300000230781831,
+            "trace_distance": 0.07000000000000002
+        }
+    },
+    "0.012222222222222223": {
+        "cnot": {
+            "fidelity": 0.9600000238226406,
+            "trace_distance": 0.04000000000000008
+        },
+        "dcnot": {
+            "fidelity": 0.9000000223337256,
+            "trace_distance": 0.10000000000000003
+        },
+        "cz": {
+            "fidelity": 0.9500000235744881,
+            "trace_distance": 0.05000000000000007
+        },
+        "swap": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000002
+        }
+    },
+    "0.013333333333333332": {
+        "cnot": {
+            "fidelity": 0.9300000230781831,
+            "trace_distance": 0.07000000000000005
+        },
+        "dcnot": {
+            "fidelity": 0.890000022085573,
+            "trace_distance": 0.11000000000000004
+        },
+        "cz": {
+            "fidelity": 0.9000000223337256,
+            "trace_distance": 0.10000000000000003
+        },
+        "swap": {
+            "fidelity": 0.890000022085573,
+            "trace_distance": 0.11000000000000004
+        }
+    },
+    "0.014444444444444444": {
+        "cnot": {
+            "fidelity": 0.9300000230781831,
+            "trace_distance": 0.07000000000000012
+        },
+        "dcnot": {
+            "fidelity": 0.8400000208448105,
+            "trace_distance": 0.16000000000000003
+        },
+        "cz": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000002
+        },
+        "swap": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000006
+        }
+    },
+    "0.015555555555555555": {
+        "cnot": {
+            "fidelity": 0.9100000225818781,
+            "trace_distance": 0.09000000000000005
+        },
+        "dcnot": {
+            "fidelity": 0.8800000218374205,
+            "trace_distance": 0.12000000000000002
+        },
+        "cz": {
+            "fidelity": 0.8800000218374205,
+            "trace_distance": 0.12000000000000004
+        },
+        "swap": {
+            "fidelity": 0.9300000230781831,
+            "trace_distance": 0.07
+        }
+    },
+    "0.016666666666666666": {
+        "cnot": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000002
+        },
+        "dcnot": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000002
+        },
+        "cz": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000006
+        },
+        "swap": {
+            "fidelity": 0.9100000225818781,
+            "trace_distance": 0.09000000000000004
+        }
+    },
+    "0.017777777777777778": {
+        "cnot": {
+            "fidelity": 0.890000022085573,
+            "trace_distance": 0.11
+        },
+        "dcnot": {
+            "fidelity": 0.890000022085573,
+            "trace_distance": 0.11000000000000001
+        },
+        "cz": {
+            "fidelity": 0.850000021092963,
+            "trace_distance": 0.15000000000000002
+        },
+        "swap": {
+            "fidelity": 0.890000022085573,
+            "trace_distance": 0.11000000000000001
+        }
+    },
+    "0.01888888888888889": {
+        "cnot": {
+            "fidelity": 0.8400000208448105,
+            "trace_distance": 0.16
+        },
+        "dcnot": {
+            "fidelity": 0.8400000208448105,
+            "trace_distance": 0.16
+        },
+        "cz": {
+            "fidelity": 0.870000021589268,
+            "trace_distance": 0.13
+        },
+        "swap": {
+            "fidelity": 0.8800000218374205,
+            "trace_distance": 0.12000000000000002
+        }
+    },
+    "0.02": {
+        "cnot": {
+            "fidelity": 0.890000022085573,
+            "trace_distance": 0.11000000000000004
+        },
+        "dcnot": {
+            "fidelity": 0.9400000233263356,
+            "trace_distance": 0.060000000000000095
+        },
+        "cz": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000003
+        },
+        "swap": {
+            "fidelity": 0.8000000198522005,
+            "trace_distance": 0.2
+        }
+    },
+    "0.021111111111111112": {
+        "cnot": {
+            "fidelity": 0.8600000213411155,
+            "trace_distance": 0.14000000000000004
+        },
+        "dcnot": {
+            "fidelity": 0.8600000213411155,
+            "trace_distance": 0.14
+        },
+        "cz": {
+            "fidelity": 0.850000021092963,
+            "trace_distance": 0.15
+        },
+        "swap": {
+            "fidelity": 0.830000020596658,
+            "trace_distance": 0.17
+        }
+    },
+    "0.022222222222222223": {
+        "cnot": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000003
+        },
+        "dcnot": {
+            "fidelity": 0.850000021092963,
+            "trace_distance": 0.15
+        },
+        "cz": {
+            "fidelity": 0.8400000208448105,
+            "trace_distance": 0.16000000000000003
+        },
+        "swap": {
+            "fidelity": 0.8800000218374205,
+            "trace_distance": 0.12000000000000002
+        }
+    },
+    "0.023333333333333334": {
+        "cnot": {
+            "fidelity": 0.8600000213411155,
+            "trace_distance": 0.14
+        },
+        "dcnot": {
+            "fidelity": 0.9100000225818781,
+            "trace_distance": 0.09000000000000007
+        },
+        "cz": {
+            "fidelity": 0.8800000218374205,
+            "trace_distance": 0.12000000000000006
+        },
+        "swap": {
+            "fidelity": 0.810000020100353,
+            "trace_distance": 0.19
+        }
+    },
+    "0.024444444444444442": {
+        "cnot": {
+            "fidelity": 0.9200000228300306,
+            "trace_distance": 0.08000000000000008
+        },
+        "dcnot": {
+            "fidelity": 0.850000021092963,
+            "trace_distance": 0.15
+        },
+        "cz": {
+            "fidelity": 0.830000020596658,
+            "trace_distance": 0.16999999999999996
+        },
+        "swap": {
+            "fidelity": 0.790000019604048,
+            "trace_distance": 0.21
+        }
+    },
+    "0.025555555555555554": {
+        "cnot": {
+            "fidelity": 0.8800000218374205,
+            "trace_distance": 0.12000000000000002
+        },
+        "dcnot": {
+            "fidelity": 0.8600000213411155,
+            "trace_distance": 0.14
+        },
+        "cz": {
+            "fidelity": 0.8800000218374205,
+            "trace_distance": 0.12
+        },
+        "swap": {
+            "fidelity": 0.870000021589268,
+            "trace_distance": 0.13
+        }
+    },
+    "0.026666666666666665": {
+        "cnot": {
+            "fidelity": 0.8600000213411155,
+            "trace_distance": 0.14
+        },
+        "dcnot": {
+            "fidelity": 0.890000022085573,
+            "trace_distance": 0.11000000000000004
+        },
+        "cz": {
+            "fidelity": 0.870000021589268,
+            "trace_distance": 0.13
+        },
+        "swap": {
+            "fidelity": 0.8200000203485055,
+            "trace_distance": 0.18
+        }
+    },
+    "0.027777777777777776": {
+        "cnot": {
+            "fidelity": 0.8400000208448105,
+            "trace_distance": 0.16
+        },
+        "dcnot": {
+            "fidelity": 0.8000000198522005,
+            "trace_distance": 0.2
+        },
+        "cz": {
+            "fidelity": 0.830000020596658,
+            "trace_distance": 0.17
+        },
+        "swap": {
+            "fidelity": 0.8600000213411155,
+            "trace_distance": 0.14
+        }
+    },
+    "0.028888888888888888": {
+        "cnot": {
+            "fidelity": 0.8600000213411155,
+            "trace_distance": 0.14
+        },
+        "dcnot": {
+            "fidelity": 0.830000020596658,
+            "trace_distance": 0.17000000000000004
+        },
+        "cz": {
+            "fidelity": 0.830000020596658,
+            "trace_distance": 0.17
+        },
+        "swap": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        }
+    },
+    "0.03": {
+        "cnot": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        },
+        "dcnot": {
+            "fidelity": 0.8400000208448105,
+            "trace_distance": 0.16000000000000003
+        },
+        "cz": {
+            "fidelity": 0.8200000203485055,
+            "trace_distance": 0.18
+        },
+        "swap": {
+            "fidelity": 0.830000020596658,
+            "trace_distance": 0.16999999999999996
+        }
+    },
+    "0.03111111111111111": {
+        "cnot": {
+            "fidelity": 0.850000021092963,
+            "trace_distance": 0.15
+        },
+        "dcnot": {
+            "fidelity": 0.8400000208448105,
+            "trace_distance": 0.16
+        },
+        "cz": {
+            "fidelity": 0.890000022085573,
+            "trace_distance": 0.11
+        },
+        "swap": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        }
+    },
+    "0.03222222222222222": {
+        "cnot": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        },
+        "dcnot": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        },
+        "cz": {
+            "fidelity": 0.850000021092963,
+            "trace_distance": 0.15
+        },
+        "swap": {
+            "fidelity": 0.730000018115133,
+            "trace_distance": 0.27
+        }
+    },
+    "0.03333333333333333": {
+        "cnot": {
+            "fidelity": 0.870000021589268,
+            "trace_distance": 0.13000000000000003
+        },
+        "dcnot": {
+            "fidelity": 0.8400000208448105,
+            "trace_distance": 0.16
+        },
+        "cz": {
+            "fidelity": 0.8200000203485055,
+            "trace_distance": 0.18
+        },
+        "swap": {
+            "fidelity": 0.7600000188595906,
+            "trace_distance": 0.24
+        }
+    },
+    "0.034444444444444444": {
+        "cnot": {
+            "fidelity": 0.8200000203485055,
+            "trace_distance": 0.18000000000000005
+        },
+        "dcnot": {
+            "fidelity": 0.7600000188595906,
+            "trace_distance": 0.24
+        },
+        "cz": {
+            "fidelity": 0.770000019107743,
+            "trace_distance": 0.23
+        },
+        "swap": {
+            "fidelity": 0.7400000183632855,
+            "trace_distance": 0.26
+        }
+    },
+    "0.035555555555555556": {
+        "cnot": {
+            "fidelity": 0.8000000198522005,
+            "trace_distance": 0.2
+        },
+        "dcnot": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        },
+        "cz": {
+            "fidelity": 0.790000019604048,
+            "trace_distance": 0.21
+        },
+        "swap": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        }
+    },
+    "0.03666666666666667": {
+        "cnot": {
+            "fidelity": 0.850000021092963,
+            "trace_distance": 0.15000000000000002
+        },
+        "dcnot": {
+            "fidelity": 0.8400000208448105,
+            "trace_distance": 0.16
+        },
+        "cz": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        },
+        "swap": {
+            "fidelity": 0.7500000186114381,
+            "trace_distance": 0.25
+        }
+    },
+    "0.03777777777777778": {
+        "cnot": {
+            "fidelity": 0.790000019604048,
+            "trace_distance": 0.21
+        },
+        "dcnot": {
+            "fidelity": 0.770000019107743,
+            "trace_distance": 0.23
+        },
+        "cz": {
+            "fidelity": 0.770000019107743,
+            "trace_distance": 0.23
+        },
+        "swap": {
+            "fidelity": 0.810000020100353,
+            "trace_distance": 0.19
+        }
+    },
+    "0.03888888888888889": {
+        "cnot": {
+            "fidelity": 0.7400000183632855,
+            "trace_distance": 0.26
+        },
+        "dcnot": {
+            "fidelity": 0.830000020596658,
+            "trace_distance": 0.17
+        },
+        "cz": {
+            "fidelity": 0.8000000198522005,
+            "trace_distance": 0.2
+        },
+        "swap": {
+            "fidelity": 0.7500000186114381,
+            "trace_distance": 0.25
+        }
+    },
+    "0.04": {
+        "cnot": {
+            "fidelity": 0.8000000198522005,
+            "trace_distance": 0.2
+        },
+        "dcnot": {
+            "fidelity": 0.7600000188595906,
+            "trace_distance": 0.24
+        },
+        "cz": {
+            "fidelity": 0.830000020596658,
+            "trace_distance": 0.17
+        },
+        "swap": {
+            "fidelity": 0.730000018115133,
+            "trace_distance": 0.27
+        }
+    },
+    "0.04": {
+        "cnot": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        },
+        "dcnot": {
+            "fidelity": 0.8000000198522005,
+            "trace_distance": 0.2
+        },
+        "cz": {
+            "fidelity": 0.7400000183632855,
+            "trace_distance": 0.26
+        },
+        "swap": {
+            "fidelity": 0.810000020100353,
+            "trace_distance": 0.19
+        }
+    },
+    "0.04111111111111111": {
+        "cnot": {
+            "fidelity": 0.830000020596658,
+            "trace_distance": 0.17
+        },
+        "dcnot": {
+            "fidelity": 0.810000020100353,
+            "trace_distance": 0.19
+        },
+        "cz": {
+            "fidelity": 0.730000018115133,
+            "trace_distance": 0.27
+        },
+        "swap": {
+            "fidelity": 0.7400000183632855,
+            "trace_distance": 0.26
+        }
+    },
+    "0.042222222222222223": {
+        "cnot": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        },
+        "dcnot": {
+            "fidelity": 0.7200000178669805,
+            "trace_distance": 0.28
+        },
+        "cz": {
+            "fidelity": 0.8000000198522005,
+            "trace_distance": 0.20000000000000004
+        },
+        "swap": {
+            "fidelity": 0.7400000183632855,
+            "trace_distance": 0.26
+        }
+    },
+    "0.043333333333333335": {
+        "cnot": {
+            "fidelity": 0.850000021092963,
+            "trace_distance": 0.15
+        },
+        "dcnot": {
+            "fidelity": 0.7000000173706755,
+            "trace_distance": 0.3
+        },
+        "cz": {
+            "fidelity": 0.8000000198522005,
+            "trace_distance": 0.2
+        },
+        "swap": {
+            "fidelity": 0.770000019107743,
+            "trace_distance": 0.23
+        }
+    },
+    "0.044444444444444446": {
+        "cnot": {
+            "fidelity": 0.7400000183632855,
+            "trace_distance": 0.26
+        },
+        "dcnot": {
+            "fidelity": 0.770000019107743,
+            "trace_distance": 0.23
+        },
+        "cz": {
+            "fidelity": 0.770000019107743,
+            "trace_distance": 0.23
+        },
+        "swap": {
+            "fidelity": 0.730000018115133,
+            "trace_distance": 0.27
+        }
+    },
+    "0.04555555555555556": {
+        "cnot": {
+            "fidelity": 0.7600000188595906,
+            "trace_distance": 0.24
+        },
+        "dcnot": {
+            "fidelity": 0.7000000173706755,
+            "trace_distance": 0.3
+        },
+        "cz": {
+            "fidelity": 0.7200000178669805,
+            "trace_distance": 0.27999999999999997
+        },
+        "swap": {
+            "fidelity": 0.770000019107743,
+            "trace_distance": 0.23
+        }
+    },
+    "0.04666666666666667": {
+        "cnot": {
+            "fidelity": 0.7200000178669805,
+            "trace_distance": 0.28
+        },
+        "dcnot": {
+            "fidelity": 0.730000018115133,
+            "trace_distance": 0.27
+        },
+        "cz": {
+            "fidelity": 0.810000020100353,
+            "trace_distance": 0.19
+        },
+        "swap": {
+            "fidelity": 0.710000017618828,
+            "trace_distance": 0.29
+        }
+    },
+    "0.04777777777777778": {
+        "cnot": {
+            "fidelity": 0.7400000183632855,
+            "trace_distance": 0.26
+        },
+        "dcnot": {
+            "fidelity": 0.710000017618828,
+            "trace_distance": 0.29
+        },
+        "cz": {
+            "fidelity": 0.730000018115133,
+            "trace_distance": 0.27
+        },
+        "swap": {
+            "fidelity": 0.730000018115133,
+            "trace_distance": 0.27
+        }
+    },
+    "0.04888888888888889": {
+        "cnot": {
+            "fidelity": 0.7400000183632855,
+            "trace_distance": 0.26
+        },
+        "dcnot": {
+            "fidelity": 0.6600000163780655,
+            "trace_distance": 0.34
+        },
+        "cz": {
+            "fidelity": 0.650000016129913,
+            "trace_distance": 0.35
+        },
+        "swap": {
+            "fidelity": 0.690000017122523,
+            "trace_distance": 0.31
+        }
+    },
+    "0.05": {
+        "cnot": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        },
+        "dcnot": {
+            "fidelity": 0.7800000193558955,
+            "trace_distance": 0.22
+        },
+        "cz": {
+            "fidelity": 0.8000000198522005,
+            "trace_distance": 0.2
+        },
+        "swap": {
+            "fidelity": 0.690000017122523,
+            "trace_distance": 0.31
+        }
+    }
+}

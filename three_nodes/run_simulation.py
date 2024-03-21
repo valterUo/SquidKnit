@@ -1,22 +1,18 @@
 import logging
 
-from networkx import DiGraph
 from three_nodes.application import LeftProgram, RightProgram, GateProgram
-from two_nodes.config import create_two_node_network
-from netsquid_netbuilder.util.network_generation import create_simple_network
+from utils.network_generation import create_simple_network
 
 from squidasm.run.stack.run import run
 from utils.utils import calculate_reference_state, get_info
 
-def run_simulation(left, right, gate, num_times = 1, device = "generic", link_fidelity: float = 1.0, qdevice_noise: float = 0.0, log = False):
-
-    node_names = ["Gate", "Left", "Right"]
+def run_simulation(left, right, gate, num_times = 1, prob_successes = {}, link_noises = {}, qdevice_noises = {}, log = False):
     
-    graph = DiGraph()
-    graph.add_nodes_from(node_names)
-    graph.add_edges_from([("Gate", "Left"), ("Gate", "Right")])
-    
-    cfg = create_simple_network(["Left", "Right", "Gate"], link_noise = 1 - link_fidelity*4 / 3, qdevice_noise = qdevice_noise) #create_network_from_graph(graph) #create_two_node_network(node_names, device, link_fidelity, qdevice_noise)
+    cfg = create_simple_network(node_names = ["Left", "Right", "Gate"],
+                                link_names = [("Left", "Gate"), ("Right", "Gate")],
+                                link_noises = link_noises,
+                                qdevice_noises = qdevice_noises,
+                                prob_successes = prob_successes)
 
     gate_program = GateProgram(gate)
     left_program = LeftProgram(left)
@@ -29,15 +25,16 @@ def run_simulation(left, right, gate, num_times = 1, device = "generic", link_fi
         
     results = {"fidelity": 0,
                "trace_distance": 0 }
+    
+    input_gates = {"first_qubit": left, "second_qubit": right}
+    reference_state = calculate_reference_state(input_gates, gate)
 
+    #gc.collect()
     for _ in range(num_times):
         gate_result = run(
             config = cfg,
             programs = {"Left": left_program, "Right": right_program, "Gate": gate_program})
-        #print(gate_result)
 
-        input_gates = {"first_qubit": left, "second_qubit": right}
-        reference_state = calculate_reference_state(input_gates, gate)
         qinfo = get_info(gate_result[-1], reference_state)
         results["fidelity"] += qinfo["fidelity"]
         results["trace_distance"] += qinfo["trace_distance"]
